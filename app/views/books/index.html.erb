@@ -8,10 +8,12 @@
     </tr>
   </thead>
   <tbody>
+    <% @books.each do |book| %>
+    <% end %>
     <tr>
       <td>リーダブルコード</td>
       <td>より良いコードを書くためのシンプルで実用的なテクニック</td>
-      
+      <td><%= link_to "Show",book_path(book.id) %></td>
       
     </tr>
     <tr>
@@ -35,20 +37,19 @@
     <tr>
       <td>アルゴリズム図鑑</td>
       <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
-      
+     
       
     </tr>
     <tr>
       <td>達人プログラマー</td>
       <td>プログラマ入門者は必読！</td>
-      
+      <
       
     </tr>
     <tr>
       <td>データベース実践入門</td>
       <td>効率的なSQL文を教えてくれます</td>
-      
-      
+     
     </tr>
   </tbody>
 </table>
