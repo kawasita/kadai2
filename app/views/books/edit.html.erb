@@ -1,20 +1,26 @@
 <h1>Editing Boook</h1>
 <% if @book.errors.any? %>
+<div id="errors">
   <%= @book.errors.count %>errors prohibited this book from being saved:
   <ul>
     <% @book.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>
+</div>
 <% end %>
 
 <%= form_with model:@book ,url: book_path(@book.id), method: :patch do |f| %>
 
+<div class="text">
   <h2>本のタイトル</h2>
   <%= f.text_field :title %>
+</div>
 
+<div class="text">
   <h2>感想</h2>
   <%= f.text_field :body %>
+</div>
 
   <p><%= f.submit 'Update Book' %></p>
   

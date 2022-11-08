@@ -20,8 +20,20 @@ p{
   margin: 3em;
 }
 
-.byn:hover{
-  background: rgba(0,0,0,0.5);
+#errors{
+  width: 450px;
+  border: solid 1px red;
+  padding: 7px;
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+}
+
+.text{
+  margin-bottom: 10px;
+}
+
+.notice{
+  color: green;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
