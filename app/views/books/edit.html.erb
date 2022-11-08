@@ -1,19 +1,25 @@
 <h1>Editing Boook</h1>
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>errors prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
-<%= form_with model:@book, url: update_book_path(@book.id), method: :patch do |f| %>
+<%= form_with model:@book ,url: book_path(@book.id), method: :patch do |f| %>
 
-  <h2>Title</h2>
+  <h2>本のタイトル</h2>
   <%= f.text_field :title %>
 
-  <h2>Body</h2>
+  <h2>感想</h2>
   <%= f.text_field :body %>
 
-  <%= f.submit 'Update Book' %>
+  <p><%= f.submit 'Update Book' %></p>
   
 <% end %>
 
-<%= link_to "Show", %>
-<%= link_to "Back", %>
-
-<td><%= link_to "Edit", %></td>
-      <td><%= link_to "Destroy", %></td>
+<%= link_to "Show", book_path(@book.id) %>
+|
+<%= link_to "Back", books_path(@books) %>

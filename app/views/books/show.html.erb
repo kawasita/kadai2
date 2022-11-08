@@ -1,13 +1,17 @@
+<div class="notice">
+  <%= flash[:notice] %>
+</div>
+
 <p>
-  <strong>Title:</strong>
-  <p><%= @book.title %></p>
+  <strong>本のタイトル:</strong>
+  <%= @book.title %>
 </p>
 
 <p>
-  <strong>Body</strong>
-  <p><%= @book.body %></p>
+  <strong>感想</strong>
+  <%= @book.body %>
 </p>
 
 <%= link_to "Edit", edit_book_path(@book.id) %>
-"|"
+|
 <%= link_to "Back", books_path(@books) %>

@@ -1,3 +1,28 @@
+
+body{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+p{
+  display: block;
+  padding-left: 3em;
+}
+
+.link:hover{
+  background: black;
+  color: #fff;
+}
+
+.link{
+  margin: 3em;
+}
+
+.byn:hover{
+  background: rgba(0,0,0,0.5);
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
